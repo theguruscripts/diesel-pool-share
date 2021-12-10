@@ -1,0 +1,82 @@
+{
+    "enabled" : true,
+	"trigger" : {
+		"hour" : 0,
+		"minute" : 15
+	},
+	"ssc_api" : "https://api.hive-engine.com/rpc",
+	"json_id" : "ssc-mainnet-hive",	
+	"decimal" : 1000,
+	"timeout" : 5000,
+	"rec_timeout" : 1000,
+	"he_timeout" : 9000,
+	"block_timeout" : 9000,
+    "contract_setting" : {
+        "limit" : 1000
+    },
+    "reward_pools_setting" : {
+        "pools" : [
+            ["SWAP.HIVE:BEE", "20", "365", true, [
+                    ["bot", true, "10", true, "botfactory", "active-keys"], 
+                    ["testo", true, "12", false, "", ""]
+                ], 
+                ["hive-engine", "aggroed"]
+            ],
+            ["SWAP.HIVE:DEC", "30", "10", true, [
+                    ["bot", true, "10", true, "botfactory", "active-keys"], 
+                    ["testo", true, "15", false, "", ""],
+                    ["neoxag", true, "10", false, "", ""]
+                ],
+                []
+            ],
+            ["SWAP.HIVE:SWAP.HBD", "10", "50", false, [
+                    ["bot", true, "5", true, "botfactory", "active-keys"]
+                ],
+                ["hive-engine"]
+            ]
+        ],
+        "mint_setting" : {			
+			"contract" : "tokens",
+			"action" : "issue",
+			"event" : "transferFromContract",				
+			"mint_memo" : "Mint {{tokensymbol}} Tokens To {{dividendtokensymbol}} Reward Pool Share - ({{date}} / {{time}} Server Time)"
+		},
+        "reward_setting" : {
+			"distributor_account" : "",
+			"distributor_activekey" : "",
+			"contract" : "tokens",
+			"action" : "transfer",
+			"event" : "transfer",
+			"reward_memo" : "Congratulations, You're Ranked {{dividendrank}} & You Earned {{dividendreward}} {{tokensymbol}} For Contributing {{dividendtokensymbol}}"
+		},
+		"balance_setting" : {
+			"contract" : "tokens",
+			"table" : "balances"
+		},
+        "pool_setting" : {
+            "contract" : "marketpools",
+            "table" : "liquidityPositions"
+        }
+    },
+    "db_string" : "",
+	"db_name" : "pooldb",
+	"db_table_pool_name" : "pooltb",
+    "db_table_dividend_name" : "dividendtb",
+    "db_table_mint_name" : "minttb",
+	"db_remove_days" : 7,
+	"rpc_nodes" : [
+		"https://api.deathwing.me",
+		"https://hive.roelandp.nl",
+		"https://api.openhive.network",
+		"https://rpc.ausbit.dev",
+		"https://hived.emre.sh",
+		"https://hive-api.arcange.eu",
+		"https://api.hive.blog",
+		"https://api.c0ff33a.uk",
+		"https://rpc.ecency.com",
+		"https://anyx.io",
+		"https://techcoderx.com",
+		"https://hived.privex.io",
+		"https://api.followbtcnews.com/"
+	]
+}

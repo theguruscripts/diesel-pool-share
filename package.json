@@ -1,0 +1,23 @@
+{
+  "name": "diesel-pool-share",
+  "version": "1.0.0",
+  "description": "Share rewards to Diesel Pool Liquidity Providers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "theguruasia",
+  "license": "ISC",
+  "dependencies": {
+    "@hiveio/hive-js": "^2.0.4",
+    "@splinterlands/hive-interface": "^2.2.7",
+    "colors": "^1.4.0",
+    "dotenv": "^8.6.0",
+    "fs": "0.0.1-security",
+    "mongodb": "^4.2.0",
+    "node-schedule": "^2.0.0",
+    "sscjs": "0.0.9",
+    "upper-case": "^2.0.2"
+  }
+}

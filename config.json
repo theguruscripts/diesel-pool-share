@@ -47,7 +47,7 @@
 			"contract" : "tokens",
 			"action" : "transfer",
 			"event" : "transfer",
-			"reward_memo" : "Congratulations, You're Ranked {{dividendrank}} & You Earned {{dividendreward}} {{tokensymbol}} For Contributing {{dividendtokensymbol}}"
+			"reward_memo" : "Congratulations, You're Ranked {{dividendrank}} & You Earned {{dividendreward}} {{tokensymbol}} For Providing Liquidity To {{dividendtokensymbol}}"
 		},
 		"balance_setting" : {
 			"contract" : "tokens",
